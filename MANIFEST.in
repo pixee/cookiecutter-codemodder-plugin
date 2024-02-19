@@ -1,0 +1,6 @@
+include README.md
+include CHANGELOG.md
+include LICENSE
+
+# TODO: update with custom path
+recursive-include src/custom_codemods/docs *.md
