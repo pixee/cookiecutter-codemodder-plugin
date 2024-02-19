@@ -13,7 +13,7 @@ readme = "README.md"
 license = {file = "LICENSE"}
 description = "Template for building custom Python codemods"
 dependencies = [
-    "codemodder~=0.80.0",
+    "codemodder>=0.81.0",
     "libcst~=1.1.0",
 ]
 keywords = ["custom", "codemod", "codemods", "security", "fix", "fixes"]
