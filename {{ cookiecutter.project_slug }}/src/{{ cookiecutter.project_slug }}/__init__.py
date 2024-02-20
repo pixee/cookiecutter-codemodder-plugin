@@ -4,7 +4,7 @@ from .custom_codemod import CustomCodemod
 
 # This name is used by the entry point in pyproject.toml to register the codemods
 registry = CodemodCollection(
-    origin="custom", # TODO: Change this to your own project name
+    origin="{{ cookiecutter.project_slug }}",
     codemods=[
         CustomCodemod,
     ],

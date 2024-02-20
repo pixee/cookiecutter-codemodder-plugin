@@ -3,4 +3,4 @@ from codemodder.codemods.api import (
     Reference,
     ReviewGuidance,
 )
-from .custom_codemod import SimpleCodemod, CoreCodemod
+from .codemod import SimpleCodemod, CustomCodemod

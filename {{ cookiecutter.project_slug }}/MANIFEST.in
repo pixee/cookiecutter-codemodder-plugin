@@ -1,0 +1,5 @@
+include README.md
+include CHANGELOG.md
+include LICENSE
+
+recursive-include src/{{ cookiecutter.project_slug }}/docs *.md

@@ -1,0 +1,10 @@
+{
+    "plugin_name": "Custom Codemod",
+    "project_name": "{{ cookiecutter.plugin_name.title() }} Plugin",
+    "project_slug": "{{ cookiecutter.plugin_name.lower().replace(' ', '_') }}",
+    "author": "Pixee",
+    "email": "python@pixee.ai",
+    "project_description": "A {{ cookiecutter.plugin_name}} plugin for Python Codemodder",
+    "project_repo": "https://github.com/pixee/codemodder-python",
+    "project_url": "{{ cookiecutter.project_repo }}"
+}
