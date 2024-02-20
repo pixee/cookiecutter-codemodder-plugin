@@ -3,15 +3,14 @@ requires = ["setuptools", "setuptools_scm>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
-# TODO: Update with your own project metadata
-authors = [{name = "Pixee", email = "python@pixee.ai"}]
+authors = [{name = "{{ cookiecutter.author }}", email = "{{ cookiecutter.email }}"}]
 # This enables the use of automatic versioning with setuptools_scm
 dynamic = ["version"]
-name = "custom-codemods" # TODO: Update with your own project name
+name = "{{ cookiecutter.project_slug }}"
 requires-python = ">=3.10.0"
 readme = "README.md"
 license = {file = "LICENSE"}
-description = "Template for building custom Python codemods"
+description = "{{ cookiecutter.project_description }}"
 dependencies = [
     "codemodder>=0.81.0",
     "libcst~=1.1.0",
@@ -29,42 +28,32 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://example.com" # Use your own URL here
-Repository = "https://github.com/pixee/python-codemod-plugin-template" # Use your own repo here
+Homepage = "{{ cookiecutter.project_url }}"
+Repository = "{{ cookiecutter.project_repo }}"
+Codemodder = "https://codemodder.io"
 
 
 [project.optional-dependencies]
 test = [
     "coverage>=7.3,<7.5",
-    "Flask<4",
-    "GitPython<4",
-    "Jinja2~=3.1.2",
-    "lxml>=4.9.3,<5.2.0",
     "mock==5.1.*",
-    "pre-commit<4",
-    "Pyjwt~=2.8.0",
     "pytest>=7.4,<8.1",
     "pytest-cov~=4.1.0",
     "pytest-mock~=3.12.0",
     "pytest-randomly==3.*",
     "pytest-xdist==3.*",
-    "security~=1.2.0",
     "types-mock==5.1.*",
-    "django>=4,<6",
-    "numpy~=1.26.0",
-    "flask_wtf~=1.2.0",
 ]
 [project.entry-points.codemods]
-# TODO: rename this entry point to match your project name
-custom = "custom_codemods:registry"
+"{{ cookiecutter.project_slug }}" = "{{ cookiecutter.project_slug }}:registry"
 
 [tool.setuptools]
 
 [tool.setuptools.package-data]
-"core_codemods.docs" = ["src/custom_codemods/docs/*.md"]
+"{{ cookiecutter.project_slug }}.docs" = ["src/{{ cookiecutter.project_slug }}/docs/*.md"]
 
 [tool.setuptools_scm]
-version_file = "src/custom_codemods/_version.py"
+version_file = "src/{{ cookiecutter.project_slug }}/_version.py"
 
 [tool.pytest.ini_options]
 # Ignore integration tests and ci tests by default
@@ -74,6 +63,6 @@ testpaths = ["tests"]
 extend-exclude = '''
 /(
   tests/samples |
-  src/codemodder/_version.py
+  src/{{ cookiecutter.project_slug }}/_version.py
 )/
 '''

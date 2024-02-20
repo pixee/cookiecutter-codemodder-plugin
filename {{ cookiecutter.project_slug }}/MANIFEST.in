@@ -2,5 +2,4 @@ include README.md
 include CHANGELOG.md
 include LICENSE
 
-# TODO: update with custom path
-recursive-include src/custom_codemods/docs *.md
+recursive-include src/{{ cookiecutter.project_slug }}/docs *.md

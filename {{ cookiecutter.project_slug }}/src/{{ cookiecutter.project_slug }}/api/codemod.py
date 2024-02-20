@@ -6,21 +6,21 @@ from codemodder.codemods.base_transformer import BaseTransformerPipeline
 from codemodder.context import CodemodExecutionContext
 
 
-class CoreCodemod(BaseCodemod):
+class CustomCodemod(BaseCodemod):
     """
     Base class for all codemods provided by this package.
     """
 
     @property
     def origin(self):
-        return "custom" # TODO: change this to your origin
+        return "{{ cookiecutter.project_slug }}"
 
     @property
     def docs_module_path(self):
-        return "custom_codemods.docs"
+        return "{{ cookiecutter.project_slug }}"
 
 
-class SASTCodemod(CoreCodemod):
+class SASTCodemod(CustomCodemod):
     requested_rules: list[str]
 
     def __init__(
@@ -49,4 +49,4 @@ class SimpleCodemod(_SimpleCodemod):
     Base class for all codemods in this package with a single detector and transformer.
     """
 
-    codemod_base = CoreCodemod
+    codemod_base = CustomCodemod
