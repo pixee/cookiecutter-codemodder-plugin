@@ -38,9 +38,10 @@ pixee:python/django-json-response-type
 pixee:python/django-receiver-on-top
 pixee:python/django-session-cookie-secure-off
 pixee:python/enable-jinja2-autoescape
+    ...
 ```
 
-**NOTE** The results are alphabetized by codemod ID so depending on your package name your codemod may not be at the top of the list.
+**NOTE**: The results are alphabetized by codemod ID so depending on your package name your codemod may not be at the top of the list.
 
 The `<new-project-name>:python/custom-codemod` represents a no-op codemod that is included as part of the template. The source code for this codemod can be found under `src/<new-project-name>/custom_codemod.py` in your project directory.
 
