@@ -135,5 +135,4 @@ dmypy.json
 *.codetf*
 *.sarif
 
-# version
-src/custom_codemods/_version.py
+custom_codemod
