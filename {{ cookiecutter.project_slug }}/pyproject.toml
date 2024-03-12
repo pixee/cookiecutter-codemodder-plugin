@@ -14,6 +14,7 @@ description = "{{ cookiecutter.project_description }}"
 dependencies = [
     "codemodder>=0.81.0",
     "libcst~=1.1.0",
+    "security==1.2.1",
 ]
 keywords = ["custom", "codemod", "codemods", "security", "fix", "fixes"]
 classifiers = [

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
 import subprocess
+from security import safe_command
 
-subprocess.run(['git', 'init'])
+safe_command.run(subprocess.run, ['git', 'init'])
