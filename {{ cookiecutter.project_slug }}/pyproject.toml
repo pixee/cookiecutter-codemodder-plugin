@@ -12,7 +12,7 @@ readme = "README.md"
 license = {file = "LICENSE"}
 description = "{{ cookiecutter.project_description }}"
 dependencies = [
-    "codemodder>=0.81.0",
+    "codemodder>=2.2.0",
     "libcst~=1.1.0",
 ]
 keywords = ["custom", "codemod", "codemods", "security", "fix", "fixes"]
